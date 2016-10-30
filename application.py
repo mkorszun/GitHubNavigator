@@ -1,6 +1,5 @@
 import requests
 from flask.json import jsonify
-from datetime import datetime
 
 import os
 from flask import Flask
