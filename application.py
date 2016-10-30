@@ -8,6 +8,7 @@ from flask import Flask
 from webargs import fields
 from webargs.flaskparser import use_args
 from flask import render_template
+import dateutil.parser
 
 REPO_SEARCH_QUERY = 'https://api.github.com/search/repositories?q={0}'
 COMMITS_SEARCH_QUERY = 'https://api.github.com/repos/{0}/{1}/commits'
@@ -48,7 +49,7 @@ def args_error_handler(err):
 
 
 def str_to_datetime(created_at):
-    return datetime.strptime(created_at, '%Y-%m-%dT%H:%M:%SZ')
+    return dateutil.parser.parse(created_at)
 
 
 def set_last_commit(repo):
