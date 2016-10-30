@@ -1,4 +1,4 @@
-Flask
-webargs
-requests
-python-dateutil
+Flask==0.11.1
+webargs==1.4.0
+requests==2.11.1
+python-dateutil==2.5.3
